@@ -107,32 +107,55 @@ src="https://www.facebook.com/tr?id=853072092791218&ev=PageView&noscript=1"
 <p></p>
 
 
-            <script>
-  // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
-  const link = 'https://checkout.payt.com.br/b6e5391be8277308d0801a0be95ac706?src=saidadapv';
-
+<script>
+  // ALTERE O LINK PARA A PÁGINA DE REDIRECIONAMENTO
+  const link = 'https://romancetime.site/portal/?src=saidadapv';
+  
   function setBackRedirect(url) {
-    let urlBackRedirect = url;
-    urlBackRedirect = urlBackRedirect =
-      urlBackRedirect.trim() +
-      (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
-      document.location.search.replace('?', '').toString();
-
-    history.pushState({}, '', location.href);
-    history.pushState({}, '', location.href);
-    history.pushState({}, '', location.href);
-
-    window.addEventListener('popstate', () => {
-      console.log('onpopstate', urlBackRedirect);
-      setTimeout(() => {
-        location.href = urlBackRedirect;
-      }, 1);
-    });
+    // Preserva parâmetros da URL atual
+    let urlBackRedirect = url.trim();
+    const currentParams = document.location.search.replace('?', '');
+    
+    if (currentParams) {
+      urlBackRedirect += (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') + currentParams;
+    }
+    
+    // Adiciona múltiplas entradas no histórico
+    if (window.history && window.history.pushState) {
+      // Adiciona entradas extras no histórico
+      for (let i = 0; i < 3; i++) {
+        history.pushState(null, '', location.href);
+      }
+      
+      // Event listener para detectar o botão voltar
+      window.addEventListener('popstate', function(e) {
+        // Previne o comportamento padrão
+        history.pushState(null, '', location.href);
+        
+        // Redireciona
+        setTimeout(function() {
+          window.location.href = urlBackRedirect;
+        }, 10);
+      }, false);
+      
+      // Suporte adicional para iOS
+      window.addEventListener('pageshow', function(e) {
+        if (e.persisted) {
+          history.pushState(null, '', location.href);
+        }
+      });
+    }
   }
-
-  setBackRedirect(link);
-</script>
-            
+  
+  // Executa quando o DOM estiver pronto
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      setBackRedirect(link);
+    });
+  } else {
+    setBackRedirect(link);
+  }
+</script> 
             <!--============================================================ CÓDIGO DA VSL ==========================================================================================-->
 
            <vturb-smartplayer id="vid-68da3833f04f55b334a5bff0" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/68da3833f04f55b334a5bff0/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
@@ -567,4 +590,5 @@ Sinceramente, esse método superou todas as minhas expectativas. Nota 10!</td>
     <script src="./assets/js/com.js"></script>
   </body>
 </html>
+
 
