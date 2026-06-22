@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/6a384ff79190883898e4eded/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/6a384fde2c4677057f0e1d0a/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://license.vturb.com">
 <title>Quiz - 116 Perguntas</title>
 <!-- Pré-carrega imagem da etapa final para aparecer junto com o carregamento -->
 <link rel="preload" as="image" href="./img1/a1.png">
@@ -383,14 +391,9 @@ body.is-vsl .top{display:none}
   <div class="vsl-shell">
     <div class="live-count"><span class="live-dot"></span><span>1222 homens assistindo agora</span></div>
 
-    <div class="vturb-wrap" id="vslPlayer">
-      <vturb-smartplayer id="vid-6a384ff79190883898e4eded" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
-      <script type="text/javascript">
-        var s=document.createElement("script");
-        s.src="https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/6a384ff79190883898e4eded/v4/player.js";
-        s.async=!0;
-        document.head.appendChild(s);
-      </script>
+    <div class="vturb-wrap" id="vslPlayer" data-loaded="0">
+      <!-- O player VTurb é carregado apenas quando o usuário chega nesta etapa.
+           Isso evita vazamento de áudio nas primeiras telas do quiz. -->
     </div>
 
     <div class="comments-box">
@@ -671,6 +674,21 @@ function animateLoading(screen){
   loadingAnimFrame = requestAnimationFrame(frame);
 }
 
+
+function loadVturbPlayerIfNeeded(){
+  const holder = document.getElementById('vslPlayer');
+  if(!holder || holder.dataset.loaded === '1') return;
+
+  holder.dataset.loaded = '1';
+  holder.innerHTML = '<vturb-smartplayer id="vid-6a384ff79190883898e4eded" style="display:block;margin:0 auto;width:100%;max-width:400px;"></vturb-smartplayer>';
+
+  const s = document.createElement("script");
+  s.type = "text/javascript";
+  s.src = "https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/6a384ff79190883898e4eded/v4/player.js";
+  s.async = true;
+  document.head.appendChild(s);
+}
+
 function show(i){
   if(i < 0 || i >= screens.length) return;
   clearAutoTimer();
@@ -680,6 +698,10 @@ function show(i){
   const active = screens[current];
   active.classList.add('active');
   document.body.classList.toggle('is-vsl', active.classList.contains('vsl-page'));
+
+  if(active.classList.contains('vsl-page')){
+    loadVturbPlayerIfNeeded();
+  }
 
   fill.style.width = (active.dataset.progress || 0) + '%';
   window.scrollTo(0, 0);
