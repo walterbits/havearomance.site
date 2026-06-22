@@ -1,773 +1,983 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-<link rel="preload" href="https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/6a384ff79190883898e4eded/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/6a3477382e74b140262d824b/v4/player.js" as="script">
 <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-<link rel="preload" href="https://cdn.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/6a384fde2c4677057f0e1d0a/main.m3u8" as="fetch">
+<link rel="preload" href="https://cdn.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/6a34770e1c7534aa0c189b03/main.m3u8" as="fetch">
 <link rel="dns-prefetch" href="https://cdn.converteai.net">
 <link rel="dns-prefetch" href="https://scripts.converteai.net">
 <link rel="dns-prefetch" href="https://images.converteai.net">
 <link rel="dns-prefetch" href="https://license.vturb.com">
-<title>Quiz - 116 Perguntas</title>
-<!-- Pré-carrega imagem da etapa final para aparecer junto com o carregamento -->
-<link rel="preload" as="image" href="./img1/a1.png">
 
-<!-- Versão ajustada: carregamentos especiais sincronizados até 100% e responsividade revisada -->
+  <!-- UTMIFY -->
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
 
-<!-- Meta Pixel -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1008555880852696');
-fbq('init', '1575656957036278');
-fbq('track', 'PageView');
-</script>
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1008555880852696&ev=PageView&noscript=1" />
-</noscript>
-<!-- End Meta Pixel -->
+  <title>Ao Vivo Agora</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<!-- Google tag -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DG4WVV0063"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-DG4WVV0063');
-</script>
+    :root {
+      --bg-page: #f5f5f5;
+      --text-main: #111111;
+      --chat-bg: #ffffff;
+      --border-color: #e5e5e5;
+      --muted-text: #737373;
+    }
 
-<!-- UTMfy -->
-<!-- Cole abaixo o código oficial da UTMfy, caso seu painel forneça um script específico. -->
-<script>
-window.utmfy = window.utmfy || {};
-</script>
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
 
-<!-- Back redirect -->
-<script>
-const link = 'https://romancenet.site//backh/?src=saidadapv';
-function setBackRedirect(url) {
-  let urlBackRedirect = url.trim();
-  const currentParams = document.location.search.replace('?', '');
-  if (currentParams) {
-    urlBackRedirect += (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') + currentParams;
-  }
-  if (window.history && window.history.pushState) {
-    for (let i = 0; i < 3; i++) { history.pushState(null, '', location.href); }
-    window.addEventListener('popstate', function() {
-      history.pushState(null, '', location.href);
-      setTimeout(function() { window.location.href = urlBackRedirect; }, 10);
-    }, false);
-    window.addEventListener('pageshow', function(e) {
-      if (e.persisted) { history.pushState(null, '', location.href); }
-    });
-  }
-}
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', function() { setBackRedirect(link); });
-} else {
-  setBackRedirect(link);
-}
-</script>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      min-height: 100vh;
+    }
 
-<style>
-:root{--green:#38c95a;--green2:#42d52d;--text:#050505;--muted:#6f6f7c;--line:#e5e5e5;--red:#f23838;--max:680px}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;width:100%;min-height:100%;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
-.top{position:fixed;top:0;left:0;width:100%;height:42px;border-bottom:1px solid #ddd;background:#fff;z-index:50;display:flex;align-items:center;justify-content:center;padding:0 16px}
-.bar{width:min(640px,72vw);height:8px;background:#eef9ea;border-radius:99px;overflow:hidden}.fill{height:100%;width:0;background:var(--green2);border-radius:99px;transition:.35s ease}
-.screen{display:none;min-height:100svh;padding:74px 18px 42px;align-items:center;justify-content:center}.screen.active{display:flex}.wrap{width:min(var(--max),100%);text-align:center;margin:auto}
-h1{font-size:34px;line-height:1.08;margin:0 0 22px;font-weight:900;letter-spacing:-.6px}h2{font-size:25px;line-height:1.25;margin:0 0 22px;font-weight:900;letter-spacing:-.3px}.green{color:var(--green)}p{font-size:16px;line-height:1.55;color:var(--muted);margin:0 0 22px}.small{font-size:13px}.note{font-size:13px;color:#777;font-style:italic}
-.hero{color:#fff;background:#050505;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.80)),url("./img1/a0.png");background-size:cover;background-position:center;filter:brightness(.92);z-index:0}.hero .wrap{position:relative;z-index:1;margin-top:-25px}.hero p{color:#fff}.hero-load{margin-top:42vh;text-align:center;font-size:13px}.hero .mini{max-width:450px;margin:10px auto 12px;background:rgba(255,255,255,.25)}.hero .mini span{background:#ef4444}
-.options{display:grid;gap:14px;width:100%;margin:0 auto}.opt{width:100%;border:2px solid var(--line);border-radius:14px;background:#fff;min-height:64px;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;cursor:pointer;box-shadow:0 2px 7px rgba(0,0,0,.06);font-weight:800;font-size:16px;text-align:left;transition:.18s ease;color:#060606}.opt:hover,.opt.selected{border-color:var(--green2);transform:translateY(-1px)}.left{display:flex;gap:13px;align-items:center;min-width:0}.emoji{font-size:23px;width:30px;flex:0 0 30px;text-align:center}.radio{width:25px;height:25px;border:2px solid #ddd;border-radius:50%;flex:0 0 auto}.selected .radio{border-color:var(--green);box-shadow:inset 0 0 0 6px #fff;background:var(--green)}
-.cta{border:0;background:var(--green);color:#fff;font-size:16px;font-weight:900;border-radius:12px;padding:18px 18px;width:min(560px,100%);cursor:pointer;box-shadow:0 10px 24px rgba(53,200,90,.35);text-decoration:none;display:inline-block;text-align:center}.fixed-cta{position:sticky;bottom:12px;margin-top:24px}
-.proof{background:var(--green);color:#fff;text-align:left;border-radius:14px;padding:18px 22px;margin:0 auto 28px;width:min(450px,100%);box-shadow:0 12px 22px rgba(53,200,90,.25);font-weight:900}.proof small{display:block;font-weight:400;margin-top:6px}
-.loadbox{text-align:left;width:min(450px,100%);margin:auto}.loadrow{display:flex;justify-content:space-between;gap:12px;font-weight:900;margin-bottom:10px}.mini{height:8px;background:#eef9ea;border-radius:99px;overflow:hidden;margin-bottom:24px}.mini span{display:block;height:100%;width:0%;background:var(--green);border-radius:99px;transition:none;animation:none}.checks{display:grid;gap:18px;font-size:16px}.check:before{content:'✓';color:var(--green);font-weight:900;margin-right:12px}.wait{color:#aaa}.wait:before{content:'◔';color:#bbb;margin-right:12px}
-.print{width:min(360px,88%);border-radius:12px;margin:20px auto;display:block;box-shadow:0 4px 16px rgba(0,0,0,.08)}.print.big{width:min(460px,96%)}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}.card{border:1px solid #eee;border-radius:10px;padding:16px;text-align:left;box-shadow:0 2px 7px rgba(0,0,0,.04);font-size:13px;background:#fff}.card b{display:block;margin-bottom:12px}.bad{color:var(--red);font-weight:900}.good{color:var(--green);font-weight:900}.smallbar{height:6px;border-radius:99px;background:#eee;margin:6px 0 12px}.smallbar span{display:block;height:100%;background:var(--green);border-radius:99px}.profile{background:#fff0f0;border:1px solid #ffcaca;border-radius:12px;padding:22px;text-align:left;margin:20px auto;width:min(430px,100%);font-size:14px}.profile h3{text-align:center;color:red;margin-top:0;font-size:15px}.profile p{color:#111;font-size:14px}.profile ul{padding-left:20px;line-height:1.8;margin:8px 0}.center-bottom{align-items:flex-end;padding-bottom:105px}
+    /* ===== HEADER ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 0 8px;
+      height: 56px;
+      width: 100%;
+    }
+    @media (min-width: 640px) {
+      .header-inner { gap: 16px; padding: 0 16px; }
+    }
 
-@media(max-width:620px){.top{height:38px}.bar{width:82vw;height:7px}.screen{padding:64px 14px 32px;min-height:100dvh}.wrap{width:100%}h1{font-size:27px;line-height:1.12}h2{font-size:22px;line-height:1.28;margin-bottom:20px}p{font-size:15px}.opt{font-size:15px;min-height:60px;padding:11px 13px;border-radius:13px}.emoji{font-size:21px;width:28px;flex-basis:28px}.radio{width:23px;height:23px}.cards{grid-template-columns:1fr}.proof{padding:16px 18px}.print{width:min(330px,96%)}.hero .wrap{margin-top:0}.hero-load{margin-top:34vh}.center-bottom{align-items:center;padding-bottom:32px}.cta{font-size:14px;padding:17px 12px}.profile{padding:18px}}
-@media(max-width:380px){h1{font-size:24px}h2{font-size:20px}.opt{font-size:14px}.left{gap:9px}.screen{padding-left:11px;padding-right:11px}}
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+    @media (min-width: 640px) {
+      .header-left { gap: 12px; }
+    }
 
-/* ===== ETAPA VSL COM COMENTÁRIOS ===== */
-body.is-vsl{background:#000;color:#111}
-body.is-vsl .top{display:none}
-.vsl-page{background:#000;color:#111;padding:20px 12px 50px;align-items:flex-start;justify-content:center;min-height:100svh}
-.vsl-shell{width:min(760px,100%);margin:0 auto;text-align:center}
-.live-count{color:#fff;font-weight:800;font-size:15px;margin:4px 0 16px;display:flex;gap:8px;justify-content:center;align-items:center}
-.live-dot{width:8px;height:8px;background:#ff2c25;border-radius:50%;box-shadow:0 0 8px rgba(255,44,37,.8)}
-.vsl-player{width:min(390px,92vw);height:min(720px,78vh);min-height:560px;margin:0 auto 38px;background:#6b4caf;display:flex;align-items:center;justify-content:center;color:#fff;position:relative;overflow:hidden}
-.vsl-player iframe,.vsl-player video{width:100%;height:100%;border:0;display:block}
-.video-placeholder{padding:26px;text-align:left;width:100%}
-.video-placeholder h3{font-size:21px;line-height:1.2;margin:0 0 28px;text-align:center;color:#fff}
-.video-choice{display:flex;align-items:center;gap:16px;margin:20px auto;max-width:260px;font-size:16px;font-weight:800;color:#fff}
-.video-icon{width:34px;height:34px;border:2px solid rgba(255,255,255,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+    .menu-btn {
+      padding: 8px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .menu-btn:hover { background: #f5f5f5; }
 
-.vturb-wrap{width:min(400px,100%);margin:0 auto 38px;background:#000;border-radius:8px;overflow:hidden}
-.vturb-wrap vturb-smartplayer{display:block;margin:0 auto;width:100%;max-width:400px}
-.comments-box{width:min(720px,100%);margin:0 auto 28px;background:#fff;border-radius:8px;overflow:hidden;text-align:left;border:1px solid #ddd}
-.comments-head{font-size:18px;font-weight:700;padding:18px 20px;border-bottom:1px solid #ddd;color:#111}
-.comment{display:flex;gap:12px;padding:16px 20px;border-bottom:1px solid #e7e7e7}
-.avatar{width:36px!important;height:36px!important;min-width:36px!important;max-width:36px!important;min-height:36px!important;max-height:36px!important;border-radius:50%;flex:0 0 36px!important;background:linear-gradient(135deg,#d5d5d5,#777);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:13px;overflow:hidden;line-height:0}
-.avatar img,.comment > img{width:36px!important;height:36px!important;min-width:36px!important;max-width:36px!important;min-height:36px!important;max-height:36px!important;border-radius:50%!important;object-fit:cover!important;object-position:center!important;display:block!important;flex:0 0 36px!important}
-.comment-body{font-size:14px;line-height:1.35;color:#050505}
-.comment-name{font-weight:700;color:#184b9b;margin-bottom:8px}
-.comment-actions{font-size:13px;color:#6b6b6b;margin-top:10px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-.comment-actions b{font-weight:500;color:#385898}
-.connect-comment{padding:18px;text-align:center;background:#f5f6f7}
-.fb-btn{display:inline-flex;align-items:center;gap:8px;background:#3578e5;color:#fff;border-radius:5px;padding:12px 18px;font-weight:800;font-size:14px}
-.vsl-checkout{margin:24px auto 0;display:block;width:min(520px,100%);background:#2fa34a;color:#fff;font-weight:900;border-radius:9px;padding:18px 16px;text-decoration:none;box-shadow:0 8px 0 rgba(47,163,74,.28);text-align:center}
-@media(max-width:620px){
-  .vsl-page{padding:10px 10px 36px}
-  .vsl-player{width:min(360px,96vw);height:640px;min-height:520px;margin-bottom:28px}
-  .vturb-wrap{width:min(400px,96vw);margin-bottom:28px}
-  .comments-box{border-radius:6px}
-  .comments-head{font-size:16px;padding:14px}
-  .comment{padding:14px 12px;gap:10px}
-  .comment-body{font-size:13.5px}
-}
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+    .logo-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 20px;
+      background: #dc2626;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+    .logo-text {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #171717;
+      white-space: nowrap;
+    }
+    @media (max-width: 360px) {
+      .logo-text { display: none; }
+    }
+    .logo-br {
+      font-size: 10px;
+      color: #737373;
+      margin-left: 2px;
+    }
 
-/* Ajuste: destaques amarelos convertidos para vermelho */
-.yellow,.gold,.highlight-yellow,.text-yellow,.text-warning{color:#ff2d2d!important}
-.bg-yellow,.bg-warning{background:#ff2d2d!important}
-/* Ajustes finais de responsividade das imagens */
-.quiz-img{
-  width:100%;
-  max-width:430px;
-  max-height:360px;
-  height:auto;
-  object-fit:contain;
-  display:block;
-  margin:18px auto;
-  border-radius:14px;
-}
-.print.big.quiz-img{max-width:430px;max-height:390px}
-.screen.question .quiz-img{max-height:300px}
-.screen.info .quiz-img{max-height:340px}
-.screen.info .cta,
-.screen.loading .cta,
-.screen.final .fixed-cta{
-  position:sticky;
-  bottom:12px;
-  z-index:20;
-  margin-top:18px;
-}
-.profile-complete{
-  display:none;
-  text-align:center;
-  margin-top:34px;
-}
-.profile-loading.done .profile-complete{
-  display:block;
-}
-.profile-check{
-  width:64px;
-  height:64px;
-  border-radius:50%;
-  background:var(--green);
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:42px;
-  font-weight:900;
-  margin:0 auto 14px;
-  box-shadow:0 8px 22px rgba(56,201,90,.26);
-}
-.profile-complete b{
-  display:block;
-  font-size:20px;
-  font-weight:900;
-  color:#000;
-}
-@media(max-width:620px){
-  .quiz-img{max-width:92vw;max-height:250px}
-  .print.big.quiz-img{max-width:92vw;max-height:310px}
-  .screen.info .cta,
-  .screen.loading .cta,
-  .screen.final .fixed-cta{
-    bottom:10px;
-  }
-}
+    /* ✅ Search centralizada e responsiva */
+    .header-center {
+      flex: 1;
+      min-width: 0;
+      max-width: 480px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .search-box {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      height: 36px;
+      border-radius: 9999px;
+      border: 1px solid #d4d4d4;
+      background: #fafafa;
+      overflow: hidden;
+    }
+    @media (min-width: 640px) {
+      .search-box { height: 40px; }
+    }
+    .search-box:focus-within { border-color: #3b82f6; }
+    .search-input {
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      background: transparent;
+      border: none;
+      padding: 0 10px;
+      font-size: 13px;
+      outline: none;
+      color: #171717;
+    }
+    @media (min-width: 640px) {
+      .search-input { padding: 0 16px; font-size: 14px; }
+    }
+    .search-input::placeholder { color: #737373; }
+    .search-btn {
+      height: 100%;
+      padding: 0 12px;
+      background: #f5f5f5;
+      border: none;
+      border-left: 1px solid #d4d4d4;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .search-btn:hover { background: #e5e5e5; }
 
-/* Sequência animada dos carregamentos especiais */
-.sequence-loader .checks{gap:16px}
-.sequence-loader .seq-item{
-  display:flex;
-  align-items:flex-start;
-  gap:12px;
-  color:#8a8a8a;
-  opacity:.78;
-  font-size:16px;
-  line-height:1.35;
-  transition:color .25s ease, opacity .25s ease;
-}
-.sequence-loader .seq-item:before{
-  content:'◔';
-  color:#9b9b9b;
-  font-weight:900;
-  flex:0 0 20px;
-  width:20px;
-  line-height:1.35;
-  display:inline-block;
-  animation:pulseSpinner .75s ease-in-out infinite alternate;
-}
-.sequence-loader .seq-item.done{
-  color:#111;
-  opacity:1;
-}
-.sequence-loader .seq-item.done:before{
-  content:'✓';
-  color:var(--green);
-  animation:none;
-}
-.sequence-loader.done .profile-complete{display:block;animation:popIn .35s ease both}
-@keyframes pulseSpinner{from{opacity:.35;transform:rotate(0deg)}to{opacity:1;transform:rotate(30deg)}}
-@keyframes popIn{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+    .voice-btn {
+      display: none;
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+      background: #f5f5f5;
+      border: none;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    @media (min-width: 640px) {
+      .voice-btn { display: flex; height: 40px; width: 40px; }
+    }
 
-.sequence-loader.final-package-loading .quiz-img{opacity:1;transform:none;transition:none}
-.sequence-loader.final-package-loading.done .quiz-img{opacity:1;transform:none}
-@media(max-width:620px){.sequence-loader .seq-item{font-size:15px}.profile-check{width:58px;height:58px;font-size:38px}}
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      flex-shrink: 0;
+    }
+    @media (min-width: 640px) {
+      .header-right { gap: 8px; }
+    }
+    .header-icon-btn {
+      position: relative;
+      padding: 8px;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .header-icon-btn:hover { background: #f5f5f5; }
+    @media (min-width: 640px) {
+      .header-icon-btn { display: flex; }
+    }
+    .header-icon-btn.mobile-show { display: flex; }
+    .notif-dot {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #dc2626;
+    }
+    .header-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #8b5cf6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      margin-left: 4px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    @media (min-width: 640px) {
+      .header-avatar { width: 32px; height: 32px; }
+    }
 
+    /* ===== MAIN ===== */
+    .main-container {
+      margin: 0 auto;
+      padding: 8px;
+      max-width: 896px;
+      width: 100%;
+    }
+    @media (min-width: 480px) {
+      .main-container { padding: 12px; }
+    }
+    @media (min-width: 640px) {
+      .main-container { padding: 24px 16px; }
+    }
 
-/* ===== AJUSTE FINAL: BOTÕES VERDES FIXOS E PULSANDO ===== */
-.screen.active .cta.nextBtn{
-  position:fixed !important;
-  left:50% !important;
-  bottom:12px !important;
-  transform:translateX(-50%) scale(1);
-  width:min(680px, calc(100vw - 24px)) !important;
-  max-width:calc(100vw - 24px) !important;
-  z-index:99999 !important;
-  margin:0 !important;
-  animation:pulseBtnFinal 1.8s ease-in-out infinite;
+    /* ===== PLAYER ===== */
+    .player-wrapper {
+      width: 100%;
+      border-radius: 8px;
+      background: transparent;
+      box-shadow: 0 4px 16px -4px rgba(0,0,0,0.2);
+    }
+    @media (min-width: 640px) {
+      .player-wrapper {
+        border-radius: 16px;
+        box-shadow: 0 10px 40px -10px rgba(0,0,0,0.25);
+      }
+    }
+
+    /* ✅ Garante que o player Vturb v4 seja 100% responsivo */
+    .player-wrapper vturb-smartplayer {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    /* Remove fundo preto do container CTA */
+    .player-wrapper > div {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+    .player-wrapper > div > div {
+      background: transparent !important;
+      background-color: transparent !important;
+    }
+
+    /* ===== VIDEO INFO ===== */
+    .video-info {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    @media (min-width: 640px) {
+      .video-info { margin-top: 16px; gap: 10px; }
+    }
+    .video-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+      word-break: break-word;
+      color: var(--text-main);
+    }
+    @media (min-width: 480px) { .video-title { font-size: 16px; } }
+    @media (min-width: 640px) { .video-title { font-size: 20px; } }
+
+    .video-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .channel-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+    .channel-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      min-width: 0;
+    }
+    .channel-name-row {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .channel-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    @media (min-width: 480px) { .channel-name { font-size: 14px; } }
+    @media (min-width: 640px) { .channel-name { font-size: 15px; } }
+
+    .verified-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #737373;
+    }
+    .subscriber-count {
+      font-size: 11px;
+      color: #737373;
+      white-space: nowrap;
+    }
+    @media (min-width: 480px) { .subscriber-count { font-size: 12px; } }
+
+    /* ✅ Live row — empurrado para a direita */
+    .live-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #dc2626;
+      color: #fff;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+    @media (min-width: 480px) {
+      .live-badge { font-size: 11px; padding: 2px 8px; }
+    }
+    .live-dot-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 7px;
+      height: 7px;
+    }
+    .live-dot-ping {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #fff;
+      animation: ping 1.5s cubic-bezier(0,0,0.2,1) infinite;
+      opacity: 0.75;
+    }
+    .live-dot {
+      position: relative;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #fff;
+    }
+    @keyframes ping {
+      75%, 100% { transform: scale(2); opacity: 0; }
+    }
+    .viewer-count {
+      font-size: 11px;
+      color: #737373;
+      white-space: nowrap;
+    }
+    @media (min-width: 480px) { .viewer-count { font-size: 12px; } }
+
+    /* ===== COMENTÁRIO FIXADO ===== */
+    .pinned-comment {
+      border-bottom: 1px solid #e5e5e5;
+      background: #f3f4f6;
+      padding: 8px 12px 10px;
+    }
+    .pinned-label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: #737373;
+      margin-bottom: 7px;
+    }
+    .pinned-label svg { flex-shrink: 0; }
+.pinned-body {
+  display: flex;
+  align-items: flex-start; /* era: center */
+  gap: 8px;
 }
-
-/* Garante espaço para o botão fixo não cobrir conteúdo nas telas com CTA */
-.screen.info .wrap,
-.screen.final .wrap{
-  padding-bottom:120px !important;
+    .pinned-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #dc2626;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    /* ✅ Pill responsiva — não transborda em telas pequenas */
+.pinned-pill {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  background: #1c1c1c;
+  border-radius: 16px;      /* era: 999px */
+  padding: 6px 14px;
+  min-width: 0;
+  flex: 1;                  /* NOVO — ocupa espaço disponível */
 }
-
-@keyframes pulseBtnFinal{
-  0%{
-    transform:translateX(-50%) scale(1);
-    box-shadow:0 8px 25px rgba(53,200,90,.35);
-  }
-  50%{
-    transform:translateX(-50%) scale(1.025);
-    box-shadow:0 14px 38px rgba(53,200,90,.58);
-  }
-  100%{
-    transform:translateX(-50%) scale(1);
-    box-shadow:0 8px 25px rgba(53,200,90,.35);
-  }
+.pinned-user {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
-
-@media(max-width:620px){
-  .screen.active .cta.nextBtn{
-    width:calc(100vw - 20px) !important;
-    max-width:calc(100vw - 20px) !important;
-    bottom:10px !important;
-    border-radius:14px !important;
-    padding:17px 12px !important;
-  }
-  .screen.info .wrap,
-  .screen.final .wrap{
-    padding-bottom:118px !important;
-  }
+.pinned-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: normal;      /* era: nowrap — agora quebra linha */
+  word-break: break-word;   /* NOVO */
+  min-width: 0;
 }
+    @media (min-width: 480px) { .pinned-text { font-size: 13px; } }
 
-</style>
+    /* ===== AVATAR ===== */
+    .avatar {
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* ===== CHAT ===== */
+    .chat-box {
+      margin-top: 10px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      background: var(--chat-bg);
+      overflow: hidden;
+    }
+    @media (min-width: 640px) {
+      .chat-box { margin-top: 16px; border-radius: 16px; }
+    }
+    .chat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .chat-header-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .chat-pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ef4444;
+      animation: pulse 2s cubic-bezier(0.4,0,0.6,1) infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .chat-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: #171717;
+    }
+    @media (min-width: 480px) { .chat-title { font-size: 14px; } }
+    .chat-count {
+      font-size: 11px;
+      color: var(--muted-text);
+      white-space: nowrap;
+    }
+    @media (min-width: 480px) { .chat-count { font-size: 12px; } }
+
+    .chat-messages {
+      height: 240px;
+      overflow-y: auto;
+      padding: 10px 10px;
+      scroll-behavior: smooth;
+      background: #fff;
+    }
+    @media (min-width: 480px) { .chat-messages { height: 270px; padding: 12px 14px; } }
+    @media (min-width: 640px) { .chat-messages { height: 320px; padding: 12px 16px; } }
+
+    .chat-empty {
+      text-align: center;
+      font-size: 13px;
+      color: #a3a3a3;
+      padding: 28px 0;
+    }
+    .chat-msg {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 12px;
+      animation: fadeSlide 0.3s ease;
+    }
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .chat-msg:last-child { margin-bottom: 0; }
+    .chat-msg-body {
+      flex: 1;
+      min-width: 0;
+      line-height: 1.4;
+    }
+    .chat-msg-user {
+      font-size: 11px;
+      font-weight: 600;
+      color: #8a8a8a;
+    }
+    @media (min-width: 480px) { .chat-msg-user { font-size: 12px; } }
+    .chat-msg-text {
+      font-size: 13px;
+      color: #171717;
+      word-break: break-word;
+    }
+    @media (min-width: 480px) { .chat-msg-text { font-size: 14px; } }
+
+    .chat-footer {
+      padding: 10px 14px;
+      border-top: 1px solid #f0f0f0;
+      background: #fafafa;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--muted-text);
+    }
+    @media (min-width: 480px) { .chat-footer { font-size: 12px; padding: 12px 16px; } }
+  </style>
 </head>
 <body>
 
-<div class="top"><div class="bar"><div class="fill" id="mainFill"></div></div></div>
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1008555880852696');
+  fbq('init', '1575656957036278');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1008555880852696&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel -->
 
-<section class="screen hero active" data-progress="5" data-auto="6000"><div class="wrap"><h1>As 116 perguntas que fazem qualquer mulher responder em minutos</h1><p>Sem precisar correr atrás, sem parecer desesperado e<br>sem ter que mudar quem você é</p><div class="hero-load"><div>Carregando teste rápido...</div><div class="mini"><span style="--w:43%"></span></div><b>43%</b></div></div></section>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DG4WVV0063"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DG4WVV0063');
+  </script>
 
-<section class="screen question" data-progress="10"><div class="wrap"><h2>Qual é o seu maior objetivo hoje?</h2><div class="options">
-<button class="opt"><span class="left"><span class="emoji">😈</span>Comer o máximo de mulheres possível</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">💍</span>Relacionamento sério</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">🔄</span>Reconquistar a minha ex</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">🔥</span>Me tornar irresistível para qualquer mulher</span><span class="radio"></span></button>
-</div></div></section>
+  <!-- Back redirect -->
+  <script>
+    const link = 'https://romancenet.site//backh/?src=saidadapv';
+    function setBackRedirect(url) {
+      let urlBackRedirect = url.trim();
+      const currentParams = document.location.search.replace('?', '');
+      if (currentParams) {
+        urlBackRedirect += (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') + currentParams;
+      }
+      if (window.history && window.history.pushState) {
+        for (let i = 0; i < 3; i++) { history.pushState(null, '', location.href); }
+        window.addEventListener('popstate', function() {
+          history.pushState(null, '', location.href);
+          setTimeout(function() { window.location.href = urlBackRedirect; }, 10);
+        }, false);
+        window.addEventListener('pageshow', function(e) {
+          if (e.persisted) { history.pushState(null, '', location.href); }
+        });
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() { setBackRedirect(link); });
+    } else {
+      setBackRedirect(link);
+    }
+  </script>
 
-<section class="screen question" data-progress="18"><div class="wrap"><h2>Atualmente você está:</h2><div class="options">
-<button class="opt"><span class="left"><span class="emoji">😎</span>Solteiro</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">💔</span>Divorciado / Separado</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">💭</span>Conhecendo alguém</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">👩‍❤️‍👨</span>Em um relacionamento</span><span class="radio"></span></button>
-</div></div></section>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="header-inner">
+      <div class="header-left">
+        <button class="menu-btn" aria-label="Menu">
+          <svg height="20" width="20" viewBox="0 0 24 24" fill="currentColor" style="color:#404040">
+            <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
+          </svg>
+        </button>
+        <div class="logo-box">
+          <div class="logo-icon" id="logoIcon">
+            <svg viewBox="0 0 24 24" height="12" width="12" fill="#fff">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+          <span class="logo-text" id="logoText">YouTube</span>
+          <span class="logo-br">BR</span>
+        </div>
+      </div>
 
-<section class="screen question" data-progress="26"><div class="wrap"><h2>O quanto você está satisfeito com sua vida sexual e amorosa?</h2><div class="options">
-<button class="opt"><span class="left"><span class="emoji">💔</span>Nada satisfeito</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">🤷‍♂️</span>Pouco, sei que poderia ser muito melhor</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">🤔</span>Tá ok, mas sinto que falta algo</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">🚀</span>Estou satisfeito</span><span class="radio"></span></button>
-</div></div></section>
+      <div class="header-center">
+        <div class="search-box">
+          <input type="text" class="search-input" placeholder="Pesquisar">
+          <button class="search-btn" aria-label="Pesquisar">
+            <svg height="15" width="15" viewBox="0 0 24 24" fill="none" stroke="#404040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
+          </button>
+        </div>
+        <button class="voice-btn" aria-label="Pesquisar por voz">
+          <svg height="20" width="20" viewBox="0 0 24 24" fill="#404040">
+            <path d="M12 14a3 3 0 003-3V5a3 3 0 10-6 0v6a3 3 0 003 3zm5-3a5 5 0 01-10 0H5a7 7 0 006 6.92V21h2v-3.08A7 7 0 0019 11h-2z"/>
+          </svg>
+        </button>
+      </div>
 
-<section class="screen question" data-progress="33"><div class="wrap"><h2>Você sabia que existem <span class="green">116 perguntas psicológicas</span> que fazem qualquer mulher responder você diferente de todos os outros homens — e ainda fazem ela correr atrás de você?</h2><p>Essas perguntas fazem parte do Código do Desejo. O homem que aplica deixa a mulher curiosa, envolvida e pensando nele o dia inteiro.</p><img class="print quiz-img" src="./img1/a1.png"><div class="options">
-<button class="opt"><span class="left"><span class="emoji">🤔</span>Não sabia</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">🔥</span>Me conta mais sobre isso</span><span class="radio"></span></button>
-</div></div></section>
+      <div class="header-right">
+        <button class="header-icon-btn" aria-label="Criar">
+          <svg height="20" width="20" viewBox="0 0 24 24" fill="none" stroke="#404040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+        </button>
+        <button class="header-icon-btn mobile-show" aria-label="Notificações">
+          <svg height="20" width="20" viewBox="0 0 24 24" fill="none" stroke="#404040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 17h5l-1.4-1.4A2 2 0 0118 14.2V11a6 6 0 10-12 0v3.2c0 .5-.2 1-.6 1.4L4 17h5m6 0a3 3 0 11-6 0"/>
+          </svg>
+          <span class="notif-dot"></span>
+        </button>
+        <div class="header-avatar">
+          <img src="./img/usuario.png" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+        </div>
+      </div>
+    </div>
+  </header>
 
-<section class="screen info" data-progress="40"><div class="wrap"><h2>Este é o Jhon Nunes (GO) depois de aplicar as <span class="green">116 perguntas do Código do Desejo</span> em uma gostosa que ele viu no Instagram</h2><img class="print big quiz-img" src="./img1/a2.png"><button class="cta nextBtn">CONTINUAR →</button></div></section>
-<section class="screen info" data-progress="47"><div class="wrap"><h2>E aqui é o João Pedro (SP) usando as <span class="green">116 perguntas psicológicas do Código do Desejo...</span></h2><img class="print big quiz-img" src="./img1/a3.png"><button class="cta nextBtn">CONTINUAR →</button></div></section>
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <div class="main-container" id="mainContainer">
 
-<section class="screen question" data-progress="54"><div class="wrap"><h2>Se você tivesse <span class="green">essas 116 perguntas nas mãos</span>, pra que você usaria?</h2><div class="options">
-<button class="opt"><span class="left"><span class="emoji">😈</span>Deixar uma mulher viciada em mim</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">❤️</span>Conquistar uma mulher de valor pra um relacionamento</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">🔄</span>Reconquistar a minha ex</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">😎</span>Comer quantas mulheres eu quiser</span><span class="radio"></span></button>
-</div></div></section>
-
-<section class="screen info" data-progress="60"><div class="wrap"><h2>Iremos personalizar as 116 perguntas para você.</h2><p>Vamos analisar seu perfil e personalizar suas 116 perguntas pra você encontrar e conquistar a mulher certa pra um relacionamento sério.</p><img class="print big quiz-img" src="./img1/a4.png"><button class="cta nextBtn">Iniciar personalização →</button></div></section>
-
-<section class="screen question" data-progress="66"><div class="wrap"><h2>Se essa mulher que você tá interessado pra algo sério posta essa foto no Instagram, como você responderia?</h2><img class="print quiz-img" src="./img1/a5.png"><div class="options">
-<button class="opt"><span class="left"><span class="emoji">😍</span>Que gata</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">💬</span>Quero ver essa marquinha de pertinho</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">😎</span>Onde você tá hoje?</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">🔥</span>Reagiria com o foguinho</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">😞</span>Não saberia o que falar / pularia o story</span><span class="radio"></span></button>
-</div></div></section>
-
-<section class="screen question" data-progress="71"><div class="wrap"><h2>Quando você fala com uma mulher que vale a pena, como é a conversa?</h2><div class="options">
-<button class="opt"><span class="left"><span class="emoji">👻</span>Chamo várias e levo vácuo</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">💔</span>Elas respondem, mas não sei como puxar a conversa</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">🎬</span>A conversa flui, mas não consigo que ela saia comigo</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">👫</span>Sempre termino na friendzone</span><span class="radio"></span></button>
-</div></div></section>
-
-<section class="screen question" data-progress="76"><div class="wrap"><h2>Quando você fala com a mulher que poderia ser sua namorada, qual sua maior trava?</h2><div class="options">
-<button class="opt"><span class="left"><span class="emoji">🏃</span>Sentir que ela não tá interessada</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">❌</span>Não saber como manter a conversa interessante</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">😔</span>Medo de falar algo errado</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">🤴</span>Achar que ela tá conversando com caras mais interessantes que eu</span><span class="radio"></span></button>
-</div></div></section>
-
-<section class="screen question" data-progress="82"><div class="wrap"><h2>Com quantas mulheres você ficou na cama na semana passada?</h2><p>(seja sincero...)</p><div class="options">
-<button class="opt"><span class="left"><span class="emoji">😂</span>Nenhuma</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">😃</span>Só 1 mulher</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">😁</span>2 mulheres</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">😉</span>3 mulheres ou mais</span><span class="radio"></span></button>
-</div></div></section>
-
-<section class="screen loading profile-loading sequence-loader" data-progress="85" data-auto="5200"><div class="wrap"><div class="proof">☑️ João Victor acabou de adquirir o Pacote das 116 Perguntas<small>há 1 min</small></div><div class="loadbox"><div class="loadrow"><span>Analisando seu perfil</span><span>39%</span></div><div class="mini"><span></span></div><div class="checks"><div class="seq-item" data-delay="450">Objetivo: Comer o máximo de mulheres possível</div><div class="seq-item" data-delay="1350">Status: Solteiro</div><div class="seq-item" data-delay="2250">Frustração principal identificada</div></div><div class="profile-complete"><div class="profile-check">✓</div><b>Perfil analisado</b></div></div></div></section>
-
-<section class="screen question" data-progress="88"><div class="wrap"><h2>Você quer adicionar ao seu método <span class="green">mais perguntas específicas pra usar no Instagram?</span></h2><div class="options"><button class="opt"><span class="left"><span class="emoji">✅</span>SIM</span><span class="radio"></span></button><button class="opt"><span class="left"><span class="emoji">❌</span>NÃO</span><span class="radio"></span></button></div></div></section>
-<section class="screen loading" data-progress="90" data-auto="2200"><div class="wrap"><div class="loadbox"><div class="loadrow"><span>Carregando...</span><span>85%</span></div><div class="mini"><span style="--w:85%"></span></div><p>Selecionando as perguntas que filtram mulher de valor no Instagram...</p></div></div></section>
-<section class="screen question" data-progress="92"><div class="wrap"><h2>Você quer adicionar ao seu método mais perguntas específicas pra subir a temperatura do chat e <span class="green">criar tensão sexual?</span></h2><div class="options"><button class="opt"><span class="left"><span class="emoji">✅</span>SIM</span><span class="radio"></span></button><button class="opt"><span class="left"><span class="emoji">❌</span>NÃO</span><span class="radio"></span></button></div></div></section>
-<section class="screen loading" data-progress="94" data-auto="2200"><div class="wrap"><div class="loadbox"><div class="loadrow"><span>Carregando...</span><span>77%</span></div><div class="mini"><span style="--w:77%"></span></div><p>Adicionando perguntas pra criar tensão sexual...</p></div></div></section>
-<section class="screen question" data-progress="96"><div class="wrap"><h2>Você quer adicionar ao seu método mais perguntas específicas pra usar com <span class="green">mulheres desconhecidas?</span></h2><p>(academia, balada, festas, rua, shopping etc.)</p><div class="options"><button class="opt"><span class="left"><span class="emoji">✅</span>SIM</span><span class="radio"></span></button><button class="opt"><span class="left"><span class="emoji">❌</span>NÃO</span><span class="radio"></span></button></div></div></section>
-<section class="screen loading" data-progress="97" data-auto="2200"><div class="wrap"><div class="loadbox"><div class="loadrow"><span>Carregando...</span><span>90%</span></div><div class="mini"><span style="--w:90%"></span></div><p>Adicionando perguntas pra mulheres desconhecidas...</p></div></div></section>
-<section class="screen question" data-progress="98"><div class="wrap"><h2>E por último, que tipo de perguntas você <span class="green">deseja adicionar ao seu método?</span></h2><p>Quero...</p><div class="options">
-<button class="opt"><span class="left"><span class="emoji">😈</span>Perguntas pra comer o maior número de mulheres possível</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">💍</span>Perguntas pra filtrar, conhecer e conquistar uma mulher pra um relacionamento sério</span><span class="radio"></span></button>
-<button class="opt"><span class="left"><span class="emoji">🔄</span>Perguntas pra reconquistar e voltar com a minha ex</span><span class="radio"></span></button>
-</div></div></section>
-
-<section class="screen loading final-package-loading sequence-loader" data-progress="99" data-auto="5600"><div class="wrap"><div class="loadbox"><div class="loadrow"><span>Montando seu pacote final de 116 perguntas</span><span>48%</span></div><div class="mini"><span></span></div><div class="checks"><div class="seq-item" data-delay="350">Perguntas pra iniciar conversa: 18</div><div class="seq-item" data-delay="950">Perguntas pra criar conexão: 24</div><div class="seq-item" data-delay="1550">Perguntas pra criar tensão: 19 (foco em conexão emocional)</div><div class="seq-item" data-delay="2150">Perguntas pra fechar o encontro: 17</div><div class="seq-item" data-delay="2800">Total: 116 perguntas personalizadas pra você</div></div><img class="print big quiz-img" src="./img1/a1.png"></div></div></section>
-
-<section class="screen final" data-progress="100"><div class="wrap"><div class="proof">☑️ SUAS 116 PERGUNTAS PSICOLÓGICAS FORAM PERSONALIZADAS COM SUCESSO!</div><p class="note">Estimativa baseada em homens que aplicaram as 116 perguntas do Código do Desejo</p><div class="cards">
-<div class="card"><b>💎 Conexão real nas conversas</b><span class="bad">✖ Hoje 25%</span><div class="smallbar"><span style="width:25%;background:var(--red)"></span></div><span class="good">☑ Em 7 dias 89%</span><div class="smallbar"><span style="width:89%"></span></div><small>+64% de evolução com o Método</small></div>
-<div class="card"><b>✨ Mulheres de valor te respondendo</b><span class="bad">✖ Hoje 20%</span><div class="smallbar"><span style="width:20%;background:var(--red)"></span></div><span class="good">☑ Em 7 dias 86%</span><div class="smallbar"><span style="width:86%"></span></div><small>+66% de evolução com o Método</small></div>
-<div class="card"><b>💍 Encontros que viram algo sério</b><span class="bad">✖ Hoje 18%</span><div class="smallbar"><span style="width:18%;background:var(--red)"></span></div><span class="good">☑ Em 7 dias 84%</span><div class="smallbar"><span style="width:84%"></span></div><small>+66% de evolução com o Método</small></div>
-<div class="card"><b>👑 Confiança pra liderar</b><span class="bad">✖ Hoje 28%</span><div class="smallbar"><span style="width:28%;background:var(--red)"></span></div><span class="good">☑ Em 7 dias 92%</span><div class="smallbar"><span style="width:92%"></span></div><small>+64% de evolução com o Método</small></div></div>
-<p class="note">Cada barra verde é um homem que parou de ser ignorado. Uma conversa que vira encontro. Um padrão que finalmente se quebra.</p>
-<div class="profile"><h3>💎 PERFIL: HOMEM DE COMPROMISSO COM POTENCIAL 💎</h3><p>Você não quer joguinho. Quer encontrar a certa e construir.</p><p>Mas hoje você tá errando ou o ALVO ou a ABORDAGEM. As 116 perguntas do seu pacote personalizado vão te dar exatamente o que falar pra:</p><ul><li>Filtrar no primeiro chat quem vale a pena</li><li>Criar conexão emocional profunda em 7 dias</li><li>Fazer ela se apaixonar antes do primeiro beijo</li><li>Plantar exclusividade sem parecer carente</li></ul><p>Você tá pronto pra acessar tudo agora?</p></div>
-<button class="cta fixed-cta nextBtn" type="button">SIM, ACESSAR MINHAS 116 PERGUNTAS →</button></div></section>
-
-<section class="screen vsl-page" data-progress="100">
-  <div class="vsl-shell">
-    <div class="live-count"><span class="live-dot"></span><span>1222 homens assistindo agora</span></div>
-
-    <div class="vturb-wrap" id="vslPlayer" data-loaded="0">
-      <!-- O player VTurb é carregado apenas quando o usuário chega nesta etapa.
-           Isso evita vazamento de áudio nas primeiras telas do quiz. -->
+    <!-- Player -->
+    <div class="player-wrapper" id="playerWrapper">
+      <vturb-smartplayer id="vid-6a3477382e74b140262d824b" style="display:block;margin:0 auto;width:100%;"></vturb-smartplayer>
+      <script type="text/javascript">
+        var s = document.createElement("script");
+        s.src = "https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/6a3477382e74b140262d824b/v4/player.js";
+        s.async = true;
+        document.head.appendChild(s);
+      </script>
     </div>
 
-    <div class="comments-box">
-      <div class="comments-head">10 de 457 Comentários</div>
+    <!-- Info -->
+    <div class="video-info">
+      <h1 class="video-title" id="videoTitle">AO VIVO - Não saia daqui!</h1>
+      <div class="video-meta">
+        <div class="channel-info">
+          <div class="avatar" id="channelAvatar" style="width:38px;height:38px;font-size:17px;background:#dc2626;flex-shrink:0;">C</div>
+          <div class="channel-details">
+            <div class="channel-name-row">
+              <span class="channel-name" id="channelName">Canal Oficial</span>
+              <span class="verified-badge" title="Canal verificado">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5l-4-4 1.41-1.41L10 13.67l6.59-6.59L18 8.5l-8 8z"/>
+                </svg>
+              </span>
+            </div>
+            <span class="subscriber-count" id="subscriberCount">400 mil inscritos</span>
+          </div>
+        </div>
+        <div class="live-row">
+          <span class="live-badge">
+            <span class="live-dot-wrap">
+              <span class="live-dot-ping"></span>
+              <span class="live-dot"></span>
+            </span>
+            AO VIVO
+          </span>
+          <span class="viewer-count" id="viewerCount">747 assistindo agora</span>
+        </div>
+      </div>
+    </div>
 
-      <div class="comment">
-        <div class="avatar"><img src="./img1/h1.jpeg" alt="Carlos Mendoza"></div>
-        <div class="comment-body">
-          <div class="comment-name">Carlos Mendoza</div>
-          Valeu irmão, eu tava na dúvida se comprava ou não. Ontem saí com duas meninas que conheci no Instagram usando as perguntas do conteúdo. Funciona de verdade.
-          <div class="comment-actions"><span>Há 2 minutos</span><b>Curtir</b><b>Responder</b><span>👍 15</span></div>
+    <!-- Chat -->
+    <div class="chat-box">
+      <div class="chat-header">
+        <div class="chat-header-left">
+          <div class="chat-pulse"></div>
+          <span class="chat-title">Chat ao vivo</span>
+        </div>
+        <span class="chat-count" id="msgCount">0 mensagens</span>
+      </div>
+
+      <!-- Comentário fixado -->
+      <div class="pinned-comment" id="pinnedComment">
+        <div class="pinned-label">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="#737373"><path d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2l-2-2z"/></svg>
+          Afixado por <span id="pinnedByName">@PedroSantos</span>
+        </div>
+        <div class="pinned-body">
+          <div class="pinned-avatar" id="pinnedAvatar">P</div>
+          <div class="pinned-pill">
+            <span class="pinned-user" id="pinnedUser">@PedroSantos</span>
+            <span class="pinned-text">ASSISTA O VÍDEO PARA LIBERAR AS MENSAGENS</span>
+          </div>
         </div>
       </div>
 
-      <div class="comment">
-        <div class="avatar"><img src="./img1/h2.jpeg" alt="Miguel Rodríguez"></div>
-        <div class="comment-body">
-          <div class="comment-name">Miguel Rodríguez</div>
-          Mano, fiquei 6 meses sem sair com ninguém depois do término. Esse fim de semana tive 3 encontros diferentes e todas querem me ver de novo. Minha confiança tá lá em cima, era exatamente o que eu precisava pra voltar pro jogo.
-          <div class="comment-actions"><span>Há 12 minutos</span><b>Curtir</b><b>Responder</b><span>👍 23</span></div>
-        </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="chat-empty">Aguardando mensagens...</div>
       </div>
-
-      <div class="comment">
-        <div class="avatar"><img src="./img1/h3.jpeg" alt="Andrés Vargas"></div>
-        <div class="comment-body">
-          <div class="comment-name">Andrés Vargas</div>
-          Vale cada centavo. Minha ex voltou a me mandar mensagem depois de 3 meses.
-          <div class="comment-actions"><span>Há 8 minutos</span><b>Curtir</b><b>Responder</b><span>👍 8</span></div>
-        </div>
+      <div class="chat-footer">
+        <svg height="14" width="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0110 0v4"/>
+        </svg>
+        Chat exclusivo para membros do canal
       </div>
-
-      <div class="comment">
-        <div class="avatar"><img src="./img1/h4.jpeg" alt="Javier Santos"></div>
-        <div class="comment-body">
-          <div class="comment-name">Javier Santos</div>
-          Eu tava super cético no começo, achei que era só mais uma enganação. Mas meu primo me convenceu e resolvi tentar. Literalmente mudou minha vida em 2 semanas. Agora tenho conversas que antes eu nem imaginava possíveis. As meninas me procuram em vez de eu correr atrás. Incrível.
-          <div class="comment-actions"><span>Há 3 horas</span><b>Curtir</b><b>Responder</b><span>👍 31</span></div>
-        </div>
-      </div>
-
-      <div class="comment">
-        <div class="avatar"><img src="./img1/h5.jpeg" alt="Ricardo Luna"></div>
-        <div class="comment-body">
-          <div class="comment-name">Ricardo Luna</div>
-          Obrigado pelo desconto. Já comprei o conteúdo e tô vendo os resultados.
-          <div class="comment-actions"><span>Ontem</span><b>Curtir</b><b>Responder</b><span>👍 5</span></div>
-        </div>
-      </div>
-
-      <div class="comment">
-        <div class="avatar"><img src="./img1/h6.jpeg" alt="Fernando Jiménez"></div>
-        <div class="comment-body">
-          <div class="comment-name">Fernando Jiménez</div>
-          No Tinder eu conseguia uns 2 matches por semana e nunca dava em nada. Agora tenho mais de 15 conversas rolando e nesse sábado vou sair com uma enfermeira que tá super interessada. O conteúdo é ouro puro, principalmente as perguntas que criam tensão.
-          <div class="comment-actions"><span>Ontem</span><b>Curtir</b><b>Responder</b><span>👍 19</span></div>
-        </div>
-      </div>
-
-      <div class="comment">
-        <div class="avatar"><img src="./img1/h7.jpeg" alt="Roberto García"></div>
-        <div class="comment-body">
-          <div class="comment-name">Roberto García</div>
-          Tenho 37 anos e achei que já era tarde pra isso. Me enganei totalmente.
-          <div class="comment-actions"><span>Ontem</span><b>Curtir</b><b>Responder</b><span>👍 12</span></div>
-        </div>
-      </div>
-
-      <div class="comment">
-        <div class="avatar"><img src="./img1/h8.jpeg" alt="Alex Torres"></div>
-        <div class="comment-body">
-          <div class="comment-name">Alex Torres</div>
-          Sempre fui o amigo das meninas bonitas, mas nunca passava disso. Com as perguntas do conteúdo consegui sair da friendzone com uma garota que eu já curtia há meses. Agora a gente tá namorando oficialmente e ela diz que adora como eu faço ela se sentir quando a gente conversa. Funciona mesmo se você aplicar do jeito certo.
-          <div class="comment-actions"><span>Ontem</span><b>Curtir</b><b>Responder</b><span>👍 27</span></div>
-        </div>
-      </div>
-
-      <div class="comment">
-        <div class="avatar"><img src="./img1/h9.jpeg" alt="Diego Morales"></div>
-        <div class="comment-body">
-          <div class="comment-name">Diego Morales</div>
-          Finalmente algo que funciona de verdade. Fácil de usar e eficaz.
-          <div class="comment-actions"><span>Ontem</span><b>Curtir</b><b>Responder</b><span>👍 6</span></div>
-        </div>
-      </div>
-
-      <div class="comment">
-        <div class="avatar"><img src="./img1/h10.jpeg" alt="Luis Herrera"></div>
-        <div class="comment-body">
-          <div class="comment-name">Luis Herrera</div>
-          Meus amigos não acreditam na mudança. Antes eu era o mais tímido do grupo e agora sou o que mais tem sucesso com as mulheres. As perguntas são tipo truques de mágica, não sei como funcionam, mas funcionam. Minha autoestima mudou completamente e isso aparece em tudo que eu faço.
-          <div class="comment-actions"><span>Ontem</span><b>Curtir</b><b>Responder</b><span>👍 22</span></div>
-        </div>
-      </div>
-
-      <div class="connect-comment"><span class="fb-btn">f&nbsp; Conecte-se para comentar</span></div>
     </div>
   </div>
-</section>
 
+  <script>
+    // ============================================================
+    // ⚙️  CONFIGURAÇÕES — EDITE AQUI
+    // ============================================================
 
-<script>
-/* =========================
-   TRACKING DO FUNIL DO QUIZ - VERSÃO CORRIGIDA
-   Correção principal: agora só existe 1 timer ativo por tela.
-   Isso evita carregamento pulando tela, travando ou avançando fora de hora.
-   ========================= */
-const screens = [...document.querySelectorAll('.screen')];
-const fill = document.getElementById('mainFill');
-let current = 0;
-let answers = [];
-let viewedSteps = new Set();
-let reachedFinal = false;
-let clickedCheckout = false;
-let autoTimer = null;
-let loadingAnimFrame = null;
-let sequenceTimers = [];
-let isTransitioning = false;
+    document.documentElement.style.setProperty('--bg-page', '#f5f5f5');
+    document.documentElement.style.setProperty('--text-main', '#111111');
 
-const trackingConfig = {};
+    const LOGO_IMG  = "";
+    const LOGO_TEXT = "YouTube";
 
-function clearAutoTimer(){
-  if(autoTimer){
-    clearTimeout(autoTimer);
-    autoTimer = null;
-  }
-  if(loadingAnimFrame){
-    cancelAnimationFrame(loadingAnimFrame);
-    loadingAnimFrame = null;
-  }
-  sequenceTimers.forEach(t => clearTimeout(t));
-  sequenceTimers = [];
-}
+    const VIDEO_TITLE    = "Descubra o SEGREDO usado pelos homens mais poderosos de HOLLYWOOD para seduzir qualquer MULHER";
+    const CHANNEL_NAME   = "Pedro Santos";
+    const CHANNEL_AVATAR = "./img/expect2.png";
+    const SUBSCRIBERS    = "453 mil inscritos";
+    const VIEWERS_START  = 1247;
 
-function getSessionId(){
-  let id = sessionStorage.getItem('quiz_session_id');
-  if(!id){
-    id = 'quiz_' + Date.now() + '_' + Math.random().toString(36).slice(2,10);
-    sessionStorage.setItem('quiz_session_id', id);
-  }
-  return id;
-}
+const COMMENTS = [
+      { time: 3,   user: "Carlos Silva",  text: "Cheguei! 🔥",                                color: "#3b82f6", avatar: "./img/h1.jpeg" },
+      { time: 7,   user: "Mariano F.",    text: "fala pessoal",                           color: "#ec4899", avatar: "./img/h2.jpeg" },
+      { time: 12,  user: "João Pedro",    text: "Esperando há 10 min, vale a pena!",           color: "#10b981", avatar: "" },
+      { time: 18,  user: "Gustavo Nunes",     text: "Muito animado! vamos!! 🙌", color: "#f59e0b", avatar: "./img/h3.jpeg" },
+      { time: 25,  user: "Rodrigo M.",    text: "Tá explicando muito bem",                     color: "#8b5cf6", avatar: "./img/h4.jpeg" },
+      { time: 32,  user: "Fernando Oli",  text: "Alguém mais do RJ aqui?",                     color: "#ef4444", avatar: "" },
+      { time: 38,  user: "Lucas Dev",     text: "Brasília presente 👋",                        color: "#06b6d4", avatar: "./img/h6.jpeg" },
+      { time: 45,  user: "Paulo",      text: "Agora pega as gatas ficou fácil🚀",                    color: "#84cc16", avatar: "" },
+      { time: 52,  user: "Marcos VR",     text: "@Paulo espera ele falar, vem aí",          color: "#f97316", avatar: "./img/h7.jpeg" },
+      { time: 60,  user: "Juliano S.",    text: "Esse método funciona mesmo, recomendo",       color: "#ec4899", avatar: "./img/h8.jpeg" },
+      { time: 68,  user: "Bruno Costa",   text: "MELHOR LIVE DO ANO 🚀🚀",                     color: "#3b82f6", avatar: "" },
+      { time: 75,  user: "Camila R.",     text: "Não sei como vivi tanto tempo sem saber disso. É o segredo para prender a atenção de qualquer mulher.",                       color: "#10b981", avatar: "./img/h10.jpeg" },
+      { time: 83,  user: "Diego P.",      text: "Quero garantir o meu",                        color: "#8b5cf6", avatar: "" },
+      { time: 92,  user: "Renato Alves",  text: "Compartilhando com meu irmão agora",         color: "#f59e0b", avatar: "./img/h11.jpg" },
+      { time: 100, user: "Thiago M.",     text: "Link onde?",                                  color: "#ef4444", avatar: "./img/h12.jpg" },
+      { time: 108, user: "Valdir",       text: "@Thiago vai aparecer logo abaixo no final",            color: "#06b6d4", avatar: "./img/h13.jpg" },
+      { time: 116, user: "Gabriel S.",    text: "Conteúdo de outro nível 🔥",                  color: "#84cc16", avatar: "" },
+      { time: 125, user: "Leonardo F.",    text: "Gostando muito, top demais",          color: "#f97316", avatar: "./img/h14.jpg" },
+      { time: 134, user: "Henrique P.",   text: "Fiz e deu certo pensei que era conversa muito bom 👍",              color: "#ec4899", avatar: "./img/h15.jpg" },
+      { time: 142, user: "Isac M.",    text: "@Henrique eu, 3 semanas e já paguei",         color: "#3b82f6", avatar: "" },
+      { time: 150, user: "Rafael Dev",    text: "Que oferta absurda hahaha",                   color: "#10b981", avatar: "./img/h16.jpg" },
+      { time: 160, user: "Bernardo S.",    text: "Tá todo mundo falando desse vídeo!! Deve funcionar né",                      color: "#8b5cf6", avatar: "./img/h17.jpg" },
+      { time: 170, user: "Felipe M.",     text: "Vamos que vamos 💪",                          color: "#f59e0b", avatar: "" },
+      { time: 180, user: "Junior R.",     text: "Obrigada pelo conteúdo!",                     color: "#ef4444", avatar: "./img/h18.jpg" },
+    ];
 
-function getUtmData(){
-  const params = new URLSearchParams(window.location.search);
-  const keys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','src','origem','fbclid','gclid','ttclid'];
-  const stored = JSON.parse(localStorage.getItem('quiz_utm_data') || '{}');
-  const data = {...stored};
-  keys.forEach(k => { if(params.get(k)) data[k] = params.get(k); });
-  localStorage.setItem('quiz_utm_data', JSON.stringify(data));
-  return data;
-}
+    const AVATAR_BG_COLORS = [
+      "#8b5cf6","#3b82f6","#10b981","#f59e0b",
+      "#ef4444","#ec4899","#06b6d4","#84cc16","#f97316",
+    ];
 
-function getStepInfo(index=current){
-  const s = screens[index];
-  const title = (s?.querySelector('h1,h2,.loadrow span,.proof')?.innerText || 'Tela ' + (index + 1)).trim();
-  return {
-    step_index: index + 1,
-    step_total: screens.length,
-    step_percent: Number(s?.dataset.progress || 0),
-    step_type: s?.classList.contains('question') ? 'pergunta' : s?.classList.contains('loading') ? 'carregamento' : s?.classList.contains('final') ? 'resultado' : s?.classList.contains('hero') ? 'inicio' : 'informacao',
-    step_title: title.slice(0, 160)
-  };
-}
+    // ============================================================
+    // 🚫 NÃO EDITE ABAIXO
+    // ============================================================
 
-function track(eventName, extra={}){
-  const payload = {
-    event: eventName,
-    quiz_name: '116 perguntas Código do Desejo',
-    quiz_session_id: getSessionId(),
-    page_url: window.location.href,
-    page_path: window.location.pathname,
-    timestamp: new Date().toISOString(),
-    ...getUtmData(),
-    ...getStepInfo(),
-    ...extra
-  };
+    function getInitials(name) { return name.trim().charAt(0).toUpperCase(); }
 
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push(payload);
-
-  if (typeof gtag === 'function') gtag('event', eventName, payload);
-
-  if (typeof fbq === 'function') {
-    if (eventName === 'quiz_inicio') fbq('track', 'ViewContent', payload);
-    else if (eventName === 'quiz_resultado') fbq('track', 'Lead', payload);
-    else if (eventName === 'quiz_clique_checkout') fbq('track', 'InitiateCheckout', payload);
-    else fbq('trackCustom', eventName, payload);
-  }
-
-  if (trackingConfig.WEBHOOK_URL) {
-    try {
-      const body = JSON.stringify(payload);
-      if (navigator.sendBeacon) navigator.sendBeacon(trackingConfig.WEBHOOK_URL, new Blob([body], {type:'application/json'}));
-      else fetch(trackingConfig.WEBHOOK_URL, {method:'POST', headers:{'Content-Type':'application/json'}, body, keepalive:true});
-    } catch(e) {}
-  }
-}
-
-function updateCheckoutLinks(){
-  getUtmData();
-}
-
-function getLoadingPercentElements(screen){
-  const els = [];
-  const heroPercent = screen.querySelector('.hero-load b');
-  if(heroPercent) els.push(heroPercent);
-  screen.querySelectorAll('.loadrow span:last-child').forEach(el => {
-    if(/%/.test(el.textContent)) els.push(el);
-  });
-  return els;
-}
-
-
-function startSequentialLoader(screen){
-  const items = [...screen.querySelectorAll('.seq-item')];
-  if(!items.length) return;
-
-  screen.classList.remove('done');
-  items.forEach(item => item.classList.remove('done'));
-
-  const auto = Number(screen.dataset.auto || 4200);
-  const totalDuration = Math.max(2600, auto - 650);
-  const firstDelay = 650;
-  const lastItemDelay = Math.max(firstDelay, totalDuration - 650);
-  const stepGap = items.length > 1 ? (lastItemDelay - firstDelay) / (items.length - 1) : 0;
-
-  items.forEach((item, index) => {
-    const delay = Math.round(firstDelay + (stepGap * index));
-    const t = setTimeout(() => item.classList.add('done'), delay);
-    sequenceTimers.push(t);
-  });
-
-  const doneTimer = setTimeout(() => {
-    screen.classList.add('done');
-    const bars = [...screen.querySelectorAll('.mini span')];
-    const percentEls = getLoadingPercentElements(screen);
-    bars.forEach(bar => { bar.style.width = '100%'; });
-    percentEls.forEach(el => { el.textContent = '100%'; });
-  }, totalDuration + 120);
-  sequenceTimers.push(doneTimer);
-}
-function animateLoading(screen){
-  const bars = [...screen.querySelectorAll('.mini span')];
-  const percentEls = getLoadingPercentElements(screen);
-  const isSequenceLoading = screen.classList.contains('sequence-loader');
-
-  if(isSequenceLoading){
-    startSequentialLoader(screen);
-  }
-
-  if(!bars.length && !percentEls.length) return;
-
-  const duration = Math.max(900, Number(screen.dataset.auto || 2200) - 120);
-  const start = performance.now();
-  const targetPercent = 100;
-
-  bars.forEach(bar => { bar.style.width = '0%'; });
-  percentEls.forEach(el => { el.textContent = '0%'; });
-
-  function frame(now){
-    const raw = Math.min(1, (now - start) / duration);
-    const eased = 1 - Math.pow(1 - raw, 3);
-    const value = Math.round(eased * targetPercent);
-
-    bars.forEach(bar => { bar.style.width = value + '%'; });
-    percentEls.forEach(el => { el.textContent = value + '%'; });
-
-    if(raw < 1){
-      loadingAnimFrame = requestAnimationFrame(frame);
-    } else {
-      bars.forEach(bar => { bar.style.width = targetPercent + '%'; });
-      percentEls.forEach(el => { el.textContent = targetPercent + '%'; });
-      loadingAnimFrame = null;
+    function getAvatarColor(name, color) {
+      if (color) return color;
+      let sum = 0;
+      for (let i = 0; i < name.length; i++) sum += name.charCodeAt(i);
+      return AVATAR_BG_COLORS[sum % AVATAR_BG_COLORS.length];
     }
-  }
 
-  loadingAnimFrame = requestAnimationFrame(frame);
-}
+    function createAvatar(name, src, color, size) {
+      if (src) {
+        const img = document.createElement('img');
+        img.src = src; img.alt = name; img.className = 'avatar';
+        img.style.width = size + 'px'; img.style.height = size + 'px';
+        return img;
+      }
+      const div = document.createElement('div');
+      div.className = 'avatar';
+      div.style.width      = size + 'px';
+      div.style.height     = size + 'px';
+      div.style.fontSize   = (size * 0.45) + 'px';
+      div.style.background = getAvatarColor(name, color);
+      div.textContent      = getInitials(name);
+      return div;
+    }
 
+    // Logo
+    document.getElementById('logoText').textContent = LOGO_TEXT;
+    if (LOGO_IMG) {
+      const logoIcon = document.getElementById('logoIcon');
+      logoIcon.innerHTML = '';
+      logoIcon.style.background = 'transparent';
+      logoIcon.style.overflow = 'hidden';
+      const logoImg = document.createElement('img');
+      logoImg.src = LOGO_IMG; logoImg.alt = LOGO_TEXT;
+      logoImg.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;';
+      logoIcon.appendChild(logoImg);
+    }
 
-function loadVturbPlayerIfNeeded(){
-  const holder = document.getElementById('vslPlayer');
-  if(!holder || holder.dataset.loaded === '1') return;
+    // Textos
+    document.getElementById('videoTitle').textContent      = VIDEO_TITLE;
+    document.getElementById('channelName').textContent     = CHANNEL_NAME;
+    document.getElementById('subscriberCount').textContent = SUBSCRIBERS;
 
-  holder.dataset.loaded = '1';
-  holder.innerHTML = '<vturb-smartplayer id="vid-6a384ff79190883898e4eded" style="display:block;margin:0 auto;width:100%;max-width:400px;"></vturb-smartplayer>';
+    // Comentário fixado
+    const pinnedHandle = '@' + CHANNEL_NAME.replace(/\s+/g, '');
+    document.getElementById('pinnedUser').textContent   = pinnedHandle;
+    document.getElementById('pinnedByName').textContent = pinnedHandle;
+    const pinnedAvatarEl = document.getElementById('pinnedAvatar');
+    if (CHANNEL_AVATAR) {
+      pinnedAvatarEl.innerHTML = '';
+      pinnedAvatarEl.style.background = 'transparent';
+      pinnedAvatarEl.style.overflow = 'hidden';
+      const pImg = document.createElement('img');
+      pImg.src = CHANNEL_AVATAR; pImg.alt = CHANNEL_NAME;
+      pImg.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;border-radius:50%;';
+      pinnedAvatarEl.appendChild(pImg);
+    } else {
+      pinnedAvatarEl.textContent = getInitials(CHANNEL_NAME);
+    }
 
-  const s = document.createElement("script");
-  s.type = "text/javascript";
-  s.src = "https://scripts.converteai.net/a74b87d4-c40b-40d0-90db-c7f5485873a8/players/6a384ff79190883898e4eded/v4/player.js";
-  s.async = true;
-  document.head.appendChild(s);
-}
+    // Avatar do canal
+    const chAvatar = document.getElementById('channelAvatar');
+    if (CHANNEL_AVATAR) {
+      chAvatar.innerHTML = '';
+      chAvatar.style.background = 'transparent';
+      chAvatar.style.overflow = 'hidden';
+      const img = document.createElement('img');
+      img.src = CHANNEL_AVATAR; img.alt = CHANNEL_NAME;
+      img.style.cssText = 'width:100%;height:100%;object-fit:cover;display:block;border-radius:50%;';
+      chAvatar.appendChild(img);
+    } else {
+      chAvatar.textContent = getInitials(CHANNEL_NAME);
+    }
 
-function show(i){
-  if(i < 0 || i >= screens.length) return;
-  clearAutoTimer();
+    // Chat
+    const chatMessages = document.getElementById('chatMessages');
+    const msgCount     = document.getElementById('msgCount');
+    const viewerEl     = document.getElementById('viewerCount');
+    let viewers = VIEWERS_START;
+    let elapsed = 0;
+    let visibleComments = [];
+    const startTime = Date.now();
 
-  screens.forEach(s => s.classList.remove('active'));
-  current = i;
-  const active = screens[current];
-  active.classList.add('active');
-  document.body.classList.toggle('is-vsl', active.classList.contains('vsl-page'));
+    function renderComments() {
+      if (visibleComments.length === 0) {
+        chatMessages.innerHTML = '<div class="chat-empty">Aguardando mensagens...</div>';
+        msgCount.textContent = '0 mensagens';
+        return;
+      }
+      chatMessages.innerHTML = '';
+      visibleComments.forEach((c) => {
+        const msg = document.createElement('div');
+        msg.className = 'chat-msg';
+        msg.appendChild(createAvatar(c.user, c.avatar || '', c.color, 30));
+        const body = document.createElement('div');
+        body.className = 'chat-msg-body';
+        const user = document.createElement('div');
+        user.className = 'chat-msg-user';
+        user.textContent = '@' + c.user.replace(/\s+/g, '');
+        const text = document.createElement('div');
+        text.className = 'chat-msg-text';
+        text.textContent = c.text;
+        body.appendChild(user);
+        body.appendChild(text);
+        msg.appendChild(body);
+        chatMessages.appendChild(msg);
+      });
+      const total = visibleComments.length;
+      msgCount.textContent = total + ' mensagen' + (total === 1 ? '' : 's');
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
 
-  if(active.classList.contains('vsl-page')){
-    loadVturbPlayerIfNeeded();
-  }
+    setInterval(() => {
+      elapsed = Math.floor((Date.now() - startTime) / 1000);
+      viewers += Math.floor(Math.random() * 5) - 1;
+      viewerEl.textContent = viewers.toLocaleString('pt-BR') + ' assistindo agora';
+      const newVisible = COMMENTS.filter(c => c.time <= elapsed);
+      if (newVisible.length !== visibleComments.length) {
+        visibleComments = newVisible;
+        renderComments();
+      }
+    }, 1000);
 
-  fill.style.width = (active.dataset.progress || 0) + '%';
-  window.scrollTo(0, 0);
-  updateCheckoutLinks();
-  animateLoading(active);
-
-  const info = getStepInfo();
-  localStorage.setItem('quiz_last_step', JSON.stringify({
-    session_id: getSessionId(),
-    step: current + 1,
-    total: screens.length,
-    title: info.step_title,
-    updated_at: new Date().toISOString()
-  }));
-
-  if(!viewedSteps.has(current)){
-    viewedSteps.add(current);
-    if(current === 0) track('quiz_inicio');
-    track(info.step_type === 'carregamento' ? 'quiz_carregamento' : info.step_type === 'resultado' ? 'quiz_resultado' : 'quiz_etapa_visualizada');
-    if(info.step_type === 'resultado') reachedFinal = true;
-  }
-
-  const auto = Number(active.dataset.auto || 0);
-  if(auto > 0){
-    const stepWhenTimerStarted = current;
-    autoTimer = setTimeout(() => {
-      if(current === stepWhenTimerStarted) next();
-    }, auto);
-  }
-}
-
-function next(){
-  if(isTransitioning) return;
-  if(current >= screens.length - 1) return;
-  isTransitioning = true;
-  show(current + 1);
-  setTimeout(() => { isTransitioning = false; }, 420);
-}
-
-document.querySelectorAll('.opt').forEach(btn => {
-  btn.addEventListener('click', () => {
-    if(isTransitioning) return;
-    clearAutoTimer();
-    btn.parentElement.querySelectorAll('.opt').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
-    const answer = btn.innerText.trim();
-    answers.push({ step: current + 1, title: getStepInfo().step_title, answer });
-    sessionStorage.setItem('quiz_answers', JSON.stringify(answers));
-    track('quiz_resposta', { answer_text: answer, answer_number: answers.length });
-    setTimeout(next, 380);
-  });
-});
-
-document.querySelectorAll('.nextBtn').forEach(b => b.addEventListener('click', () => {
-  clearAutoTimer();
-  next();
-}));
-
-
-window.addEventListener('beforeunload', () => {
-  if(!clickedCheckout && !reachedFinal){
-    track('quiz_abandono', { abandoned_at_step: current + 1, answers_count: answers.length });
-  }
-});
-
-updateCheckoutLinks();
-show(0);
-</script>
-</body></html>
+    // Desabilita PiP
+    function disablePiP() {
+      document.querySelectorAll('video').forEach(function(v) {
+        v.disablePictureInPicture = true;
+        v.setAttribute('disablepictureinpicture', '');
+        v.setAttribute('controlslist', 'nodownload nofullscreen noremoteplayback');
+      });
+    }
+    disablePiP();
+    const pipObserver = new MutationObserver(disablePiP);
+    pipObserver.observe(document.body, { childList: true, subtree: true });
+  </script>
+</body>
+</html>
